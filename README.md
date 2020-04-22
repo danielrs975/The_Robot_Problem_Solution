@@ -52,8 +52,11 @@ space and the neighbors of their neighbors. When the algorithm stops (When there
 the number of robots needed.
 
 Example
+
 we mark x when we visit a cell 
+
 State:
+
 number_of_robots = 0
 ```        _ _ _ _ _                            _ _ _ _ _ 
 start --->|_|_|_|#|_|          First DFS       |x|x|x|#|_|
