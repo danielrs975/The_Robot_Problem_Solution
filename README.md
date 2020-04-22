@@ -9,6 +9,9 @@ The Robot problem -  source code file "main.py"
 The program is written in Python (version 3.8.2),
 downloaded from https://www.python.org/downloads/
 
+### Installing
+
+First unzip the compressed file and run the following command ```python3 main.py```.
 
 ## Design
 Includes information about the solution, and the structure of the software.
@@ -45,13 +48,9 @@ For this solution, the software is divided in three importants parts, represent 
 - input.py: contain all the code necessary to process the input, this mean, input validation.
 - solution.py: contain the implementation of the algorithm that provide an answer to the problem of the Robot.
 
-### Installing
-
-First unzip the compressed file and run the following command ```python3 main.py```.
-
 ## Running the tests
 
-To run the tests use the following command ```sh python3 testing.py```
+To run the tests use the following command ```python3 testing.py```
 
 ### Unit tests
 
