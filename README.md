@@ -100,7 +100,7 @@ For this method we have only one test:
 
 - With the input, ```"* * # * * *" -----> Returns ['*', '*', '#', '*', '*', '*']```
 
-##### generate_grid method
+##### ```generate_grid``` method
 For this method we have two tests:
 
 - Valid values
