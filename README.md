@@ -89,6 +89,36 @@ The unit tests are divided in two scripts, one for each existing module.
 
 #### For the InputModule
 
+##### is_valid method
+For this method exists two unittests:
+
+- One with a valid input, ```['*', '*', '#', '*'] ----> Returns True```
+- Another with invalid input, ```['*', '1', 2, '#'] ----> Returns False```
+
+##### separate_data method
+For this method we have only one test:
+
+- With the input, ```"* * # * * *" -----> Returns ['*', '*', '#', '*', '*', '*']```
+
+##### generate_grid method
+For this method we have two tests:
+
+- Valid values
+
+```
+"* * #\n* # *\n* * *" -----> Returns [
+                                        ['*', '*', '#'],
+                                        ['*', '#', '*'],
+                                        ['*', '*', '*']
+                                    ] 
+```
+
+- Invalid values
+
+```
+"* 1\n* *" ------> Raises ValueError Exception
+```
+
 #### For the SolutionModule
 
 ### Validation tests
