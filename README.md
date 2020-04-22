@@ -89,13 +89,13 @@ The unit tests are divided in two scripts, one for each existing module.
 
 #### For the InputModule
 
-##### is_valid method
+##### ```is_valid``` method
 For this method exists two unittests:
 
 - One with a valid input, ```['*', '*', '#', '*'] ----> Returns True```
 - Another with invalid input, ```['*', '1', 2, '#'] ----> Returns False```
 
-##### separate_data method
+##### ```separate_data``` method
 For this method we have only one test:
 
 - With the input, ```"* * # * * *" -----> Returns ['*', '*', '#', '*', '*', '*']```
