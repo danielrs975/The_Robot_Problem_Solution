@@ -41,7 +41,7 @@ The output consists in a single line with a number r that represents the minimum
 
 Example:
 ```
-2
+3
 ```
 
 ### Solution Proposed
