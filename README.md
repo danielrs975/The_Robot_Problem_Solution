@@ -9,15 +9,11 @@ The Robot problem -  source code file "main.py"
 The program is written in Python (version 3.8.2),
 downloaded from https://www.python.org/downloads/
 
-### Installing
 
-First unzip the compressed file and run the following command ```sh python3 main.py```.
+## Design
+Includes information about the solution, and the structure of the software.
 
-## Running the tests
-
-To run the tests use the following command ```sh python3 testing.py```
-
-### Solution Explanation
+### Solution Proposed
 The solution of this problem is based in the use of the Depth First Search(DFS) in its core.
 
 The solution is: Everytime a space is found we start a DFS from that space. This is going to visite all the neighbors of that
@@ -41,6 +37,21 @@ start --->|_|_|_|#|_|          First DFS       |x|x|x|#|_|
 
 As there is no other not visited cell we finish and report that the minimum number
 of robots to cover all the grid is two.
+
+### Design details
+For this solution, the software is divided in three importants parts, represent it as three files:
+
+- main.py: provide an interface to allow the user to interact with the solution code.
+- input.py: contain all the code necessary to process the input, this mean, input validation.
+- solution.py: contain the implementation of the algorithm that provide an answer to the problem of the Robot.
+
+### Installing
+
+First unzip the compressed file and run the following command ```python3 main.py```.
+
+## Running the tests
+
+To run the tests use the following command ```sh python3 testing.py```
 
 ### Unit tests
 
