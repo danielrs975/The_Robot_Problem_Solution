@@ -16,6 +16,33 @@ First unzip the compressed file and run the following command ```python3 main.py
 ## Design
 Includes information about the solution, and the structure of the software.
 
+### Input and Output
+
+#### Sample Input
+
+The input consists in many lines:
+
+- The first one contain two numbers: n, m (Separated by a space). Where n is the number of rows and m the number of columns of the grid.
+- Then n lines follows. Each line contain m elements (Separated by a space), each of this element can be either '*' that represents a space or '#' that represents a wall
+
+Example:
+```
+5 6
+* * * * # * 
+* * * # * *
+* # * # # *
+* * * # * *
+* # # * # *
+```
+
+#### Sample Output
+
+The output consists in a single line with a number r that represents the minimum number of robots needed for the given grid.
+
+```
+2
+```
+
 ### Solution Proposed
 The solution of this problem is based in the use of the Depth First Search(DFS) in its core.
 
