@@ -1,6 +1,6 @@
 # Project Title
 
-The Robot problem -  source code file "init.py"
+The Robot problem -  source code file "main.py"
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ downloaded from https://www.python.org/downloads/
 
 ### Installing
 
-First unzip the compressed file and run the following command ```sh python3 init.py```.
+First unzip the compressed file and run the following command ```sh python3 main.py```.
 
 ## Running the tests
 
