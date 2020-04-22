@@ -17,7 +17,7 @@ class InputModule:
     the method to process an input
     '''
 
-    def is_valid(cells):
+    def is_valid(self, cells):
         '''
         Check if the elements contained in the cells are
         valid. This mean that are either: '*' (Spaces) or '#' (Wall)
@@ -27,7 +27,7 @@ class InputModule:
                 return False
         return True
 
-    def separate_data(line, separation_token = " "):
+    def separate_data(self, line, separation_token = " "):
         '''
         Use to break the data into pieces using a separation token
         for example:
@@ -45,7 +45,7 @@ class InputModule:
         grid = []
         for row in rows:
             cells = self.separate_data(row)
-            if self.is_valid(self, cells):
+            if self.is_valid(cells):
                 grid.append(cells)
             else:
                 raise ValueError(1)
