@@ -54,6 +54,12 @@ To run the tests use the following command ```python3 testing.py```
 
 ### Unit tests
 
+The unit tests are divided in two scripts, one for each existing module.
+
+#### For the InputModule
+
+#### For the SolutionModule
+
 ### Validation tests
 
 ## Built With
