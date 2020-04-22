@@ -18,6 +18,29 @@ First unzip the compressed file and run the following command ```sh python3 main
 To run the tests use the following command ```sh python3 testing.py```
 
 ### Solution Explanation
+The solution of this problem is based in the use of the Depth First Search(DFS) in its core.
+
+The solution is: Everytime a space is found we start a DFS from that space. This is going to visite all the neighbors of that
+space and the neighbors of their neighbors. When the algorithm stops (When there are no other spaces to visit) we add one to
+the number of robots needed.
+
+Example
+we mark x when we visit a cell 
+State:
+number_of_robots = 0
+```        _ _ _ _ _                            _ _ _ _ _ 
+start --->|_|_|_|#|_|          First DFS       |x|x|x|#|_|
+          |_|_|_|#|_|  ----------------------> |x|x|x|#|_|  number_of_robots = 1
+          |_|_|_|#|_|                          |x|x|x|#|_|
+
+ _ _ _ _ _                                        _ _ _ _ _ 
+|x|x|x|#|_| <--- start          Second DFS       |x|x|x|#|x|
+|x|x|x|#|_|------------------------------------> |x|x|x|#|x| number_of_robots = 2
+|x|x|x|#|_|                                      |x|x|x|#|x|
+```
+
+As there is no other not visited cell we finish and report that the minimum number
+of robots to cover all the grid is two.
 
 ### Unit tests
 
