@@ -39,6 +39,7 @@ Example:
 
 The output consists in a single line with a number r that represents the minimum number of robots needed for the given grid.
 
+Example:
 ```
 2
 ```
