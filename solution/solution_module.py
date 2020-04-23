@@ -82,6 +82,8 @@ class SolutionModule:
         '''
         self.visited_grid = self.generate_visited_grid(grid)
         self.number_of_rows = len(self.visited_grid)
+        if (self.number_of_rows == 0):
+            return 0
         self.number_of_columns = len(self.visited_grid[0])
 
         number_of_robots = 0

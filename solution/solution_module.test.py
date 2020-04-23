@@ -99,6 +99,83 @@ class TestSolutionModuleMethods(unittest.TestCase):
         ]
         result = self.solution_module.generate_answer(grid)
         self.assertEqual(result, 2)
+
+    def test_generate_answer_case_four(self):
+        '''
+        Case four consists in a grid with a single set of wall
+        that generates three partitions
+        '''
+        grid = [
+            ['*', '#', '*'],
+            ['*', '#', '*'],
+            ['#', '#', '#'],
+            ['*', '*', '*']
+        ]
+        result = self.solution_module.generate_answer(grid)
+        self.assertEqual(result, 3)
+
+    def test_generate_answer_case_five(self):
+        '''
+        Case five consists of a grid that all the spaces are
+        walls
+        '''
+        grid = [
+            ['#', '#', '#'],
+            ['#', '#', '#'],
+            ['#', '#', '#'],
+            ['#', '#', '#']
+        ]
+        result = self.solution_module.generate_answer(grid)
+        self.assertEqual(result, 0)
+
+    def test_generate_answer_case_six(self):
+        '''
+        Case six consists of a grid without any spaces or walls
+        '''
+        grid = []
+        result = self.solution_module.generate_answer(grid)
+        self.assertEqual(result, 0)
+
+    def test_generate_answer_case_seven(self):
+        '''
+        Case seven consists of a grid with only one row
+        '''
+        grid = [
+            ['*', '*', '#', '*']
+        ]
+        result = self.solution_module.generate_answer(grid)
+        self.assertEqual(result, 2)
+
+    def test_generate_answer_case_eight(self):
+        '''
+        Case eight consists of a really big grid
+        '''
+        grid = [
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '#', '#', '#', '#'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['#', '#', '#', '#', '#', '#', '#', '*', '*', '*', '#', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '#', '#', '#', '#'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '#', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '*', '#'],
+            ['*', '*', '*', '*', '*', '#', '*', '*', '*', '*', '*', '*', '*', '#', '*'],
+        ]
+        result = self.solution_module.generate_answer(grid)
+        self.assertEqual(result, 5)
     #--------------------------------------------------------------------
 
 
