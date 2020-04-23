@@ -36,7 +36,7 @@ class InputModule:
         '''
         return line.split(separation_token)
 
-    def generate_grid(self, string_grid):
+    def generate_grid(self, string_grid, number_columns):
         '''
         Turn the string representation of the grid
         into a python matrix (A two dimensional array)
@@ -45,6 +45,8 @@ class InputModule:
         grid = []
         for row in rows:
             cells = self.separate_data(row)
+            if len(cells) != number_columns:
+                raise ValueError(2)
             if self.is_valid(cells):
                 grid.append(cells)
             else:

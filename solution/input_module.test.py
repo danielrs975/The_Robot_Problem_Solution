@@ -41,12 +41,16 @@ class TestInputModuleMethods(unittest.TestCase):
             ['*', '#', '*'],
             ['*', '*', '*']
         ]
-        result = self.input_module.generate_grid(string_grid)
+        result = self.input_module.generate_grid(string_grid, 3)
         self.assertEqual(result, expected_result)
     
     def test_generate_grid_with_invalid_grid(self):
         string_grid = "* 1\n* *"
-        self.assertRaises(ValueError, self.input_module.generate_grid, string_grid)
+        self.assertRaises(ValueError, self.input_module.generate_grid, string_grid, 2)
+    
+    def test_generate_grid_with_another_invalid_grid(self):
+        string_grid = "* 1\n* *"
+        self.assertRaises(ValueError, self.input_module.generate_grid, string_grid, 3)
     #---------------------------------------------------------------------
 
 
