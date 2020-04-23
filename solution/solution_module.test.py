@@ -35,7 +35,22 @@ class TestSolutionModuleMethods(unittest.TestCase):
             (2, 4),
             (1, 3)
         ]
-        result = self.solution_module.calculate_neighbors(row, column)
+        result = self.solution_module.calculate_neighbors(row, column, False)
+        self.assertEqual(result, expected_result)
+
+    def test_calculate_neighbors_with_can_move_diagonally(self):
+        row, column = 2, 3
+        expected_result = [
+            (2, 2),
+            (3, 3),
+            (2, 4),
+            (1, 3),
+            (1, 2),
+            (1, 4),
+            (3, 2),
+            (3, 4)
+        ]
+        result = self.solution_module.calculate_neighbors(row, column, True)
         self.assertEqual(result, expected_result)
     #--------------------------------------------------------------------
     #-------------------- is_visited tests-------------------------------
@@ -176,6 +191,19 @@ class TestSolutionModuleMethods(unittest.TestCase):
         ]
         result = self.solution_module.generate_answer(grid)
         self.assertEqual(result, 5)
+    #--------------------------------------------------------------------
+    #----------------------Generate answer version 2---------------------
+    def test_generate_answer_can_move_diagonally(self):
+        '''
+        Provide a case with a grid with walls put in a diagonal form
+        '''
+        grid = [
+            ['*', '*', '#'],
+            ['*', '#', '*'],
+            ['#', '*', '*']
+        ]
+        result = self.solution_module.generate_answer(grid, True)
+        self.assertEqual(result, 1)
     #--------------------------------------------------------------------
 
 
