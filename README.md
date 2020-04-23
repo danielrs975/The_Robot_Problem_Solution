@@ -79,9 +79,22 @@ For this solution, the software is divided in three importants parts, represent 
 - input.py: contain all the code necessary to process the input, this mean, input validation.
 - solution.py: contain the implementation of the algorithm that provide an answer to the problem of the Robot.
 
+### Hypothetic new requirements
+
+- Now a robot can "destroy" a wall, this mean, that it can go through to a wall, it can be only one wall and only one robot can do it.
+- The robot can move diagonally now.
+
+### Solution Version 2 (Taking the last requirement)
+For this to work we only have to change the method ```calculate_neighbors``` (Find it in the solution_module.py file) to add the neighbors that are diagonally to the current position.
+
+To reuse the same code we add an additional optional argument call ```move_diagonally``` that is ```True``` if the robot can move diagonal or ```False``` otherwise. We add this argument to the ```generate_answer``` method and the ```dfs``` method. 
+
 ## Running the tests
 
-To run the tests use the following command ```python3 testing.py```
+To run the tests use the following commands:
+
+- For the solution module: ```python3 solution/solution_module.test.py```
+- For the input module: ```python3 solution/input_module.test.py```
 
 ### Unit tests
 
